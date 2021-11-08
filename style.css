@@ -96,6 +96,8 @@ input {
   padding: 5px 10px;
   color: var(--text-color);
   font-weight: 700;
+  min-width: 90px;
+  background:white;
 }
 input {
   width: 100%;
@@ -151,6 +153,10 @@ input.form-check-input:checked + label:before {
 section {
   padding-bottom: 5rem;
   border-bottom: 1px solid var(--border-color-light);
+  min-height:calc(100vh);
+  margin:auto;
+  display: flex;
+  align-items: center;
 }
 
 /* ABOUT */
@@ -200,13 +206,12 @@ section {
 #packages .package > div {
   height: 100%;
 }
-
 .slider .item > div {
   border-radius: 50px;
   position: relative;
   overflow: hidden;
   color: white;
-  height: 300px;
+  height: 360px;
 }
 .slider .item > div img {
   width: 100%;
@@ -253,6 +258,10 @@ section {
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 999;
+  opacity: .5;
+}
+.slick-arrow:hover{
+  opacity: 1;
 }
 .slick-arrow.slick-prev {
   left: -40px;
@@ -310,6 +319,11 @@ section {
 #bmi {
   background: var(--rim-green);
 }
+.slider-full{
+  height: 100vh; width: 100vw;
+}
+.slider-full .slick-slide img { height: 100vh; width: 100vw; object-fit: cover; }
+
 
 .slider-clients {
   background: var(--rim-bg-color);
@@ -351,6 +365,9 @@ section {
   justify-content: center;
   height: 95px;
   background: rgba(var(--rim-bg-color-rgb), 0.8);
+}
+#clients .filter > div a:hover{
+  background: rgba(var(--rim-bg-color-rgb), 1);
 }
 
 .slider-news .item {
@@ -400,8 +417,22 @@ footer {
 .signature span {
   opacity: 0.7;
 }
-
+@media only screen and (max-width: 1200px) {
+  .slider .item > div {
+    height:320px
+  }
+}
+@media only screen and (max-width: 997px) {
+  .slider .item > div {
+    height:230px
+  }
 @media only screen and (max-width: 767px) {
+  .slider .item > div {
+    height:180px
+  }
+  .slider .item > div .overlay{
+    padding:15px;
+  }
   header.scrolled {
     top: -107px;
   }
