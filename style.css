@@ -108,12 +108,13 @@ input:focus,
   box-shadow: none;
   outline: none;
 }
-.btn.active,
+#about .btn.active,#about .btn:hover,.btn.active,
 .btn:hover {
   border: 1px solid transparent;
   color: white;
   background: var(--rim-dark-green);
   outline: none;
+  box-shadow: none;;
 }
 .btn.filled {
   border: 1px solid var(--border-color);
@@ -165,6 +166,9 @@ section {
   border-radius: 50px;
   overflow: hidden;
 }
+#about a.btn{
+  background: transparent;
+}
 #about img {
   max-height: 540px;
 }
@@ -179,6 +183,26 @@ section {
   font-weight: 800;
 }
 
+#about #aboutreem{
+  position: relative;
+}
+#about #aboutreem>div.description{
+  position: absolute;
+  color: white;
+  width: 100%;
+  top: 0;
+  height: 100%;
+  justify-content: center;
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
+  background: var(--rim-bg-color);
+}
+#about #aboutreem.active>div.description{
+
+  visibility: visible;
+  opacity: 1;
+}
 .services {
   background-color: var(--rim-bg-color);
   border-radius: 50px;
@@ -450,7 +474,6 @@ footer {
   #about img {
     max-height: 250px;
   }
-
   .services {
     background: transparent;
     display: flex;
@@ -471,4 +494,16 @@ footer {
   .slick-arrow.slick-next {
     right: 10px;
   }
+}
+
+
+.modal-backdrop{
+  z-index:99999
+}
+.modal{
+  z-index:100000
+}
+
+.btn.close{
+  min-width: 0;
 }

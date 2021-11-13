@@ -92,4 +92,13 @@ $(document).ready(function(){
           $(".nav-link").removeClass('active')
           $(this).addClass('active')
       })
+
+      $(document).on('click',".show-desc",function(e){
+        e.preventDefault();
+        $("#aboutreem").addClass('active')
+    })
+    $(document).on('click',".hide-desc",function(e){
+      e.preventDefault();
+      $("#aboutreem").removeClass('active')
+  })
 })
